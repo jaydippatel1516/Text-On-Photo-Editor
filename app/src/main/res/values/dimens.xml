@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_tool_top_height">124dp</dimen>
+    <dimen name="text_tool_top_height_half">62dp</dimen>
+    <dimen name="action_bar_size">16dp</dimen>
+    <dimen name="action_button_min_height_material">48dp</dimen>
+    <dimen name="action_button_min_width_material">48dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="frame_margin">18dp</dimen>
+</resources>

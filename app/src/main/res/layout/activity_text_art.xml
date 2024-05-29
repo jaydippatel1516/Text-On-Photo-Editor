@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/frameLayoutEditMai"
+    android:background="@color/main_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true">
+
+    <RelativeLayout
+        android:id="@+id/relativeEdit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/toolbar_edit_photo" />
+
+        <FrameLayout
+            android:id="@+id/photo_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rl_container"
+            android:layout_below="@+id/toolBar">
+
+            <com.kessi.textarts.photoeditor.PhotoEditorView
+                android:id="@+id/imgPhotoEditor"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ProgressBar
+                android:layout_gravity="center"
+                android:id="@+id/progress_circular_loading"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="150dp"
+                android:indeterminateTint="@color/tab_text_press_color" />
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <RelativeLayout
+                android:id="@+id/rl_text_tool"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="180dp">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewpagerTextTools"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/text_tool_bottom_container" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:id="@+id/text_tool_bottom_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_alignParentBottom="true">
+
+                    <ImageView
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/btnBackTextTools"
+                        android:background="@color/bottom_bg"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_10sdp"
+                        android:clickable="true"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/text_cancel" />
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tablayoutTextTools"
+                        android:background="@color/bottom_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        ads:tabGravity="fill"
+                        ads:tabIndicatorColor="@android:color/transparent"
+                        ads:tabIndicatorHeight="0dp"
+                        ads:tabMode="scrollable" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_main_tool"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="180dp">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewpagerImageTools"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/tablayoutImageTools" />
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tablayoutImageTools"
+                    android:background="@color/bottom_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_alignParentBottom="true"
+                    ads:tabGravity="fill"
+                    ads:tabIndicatorColor="@android:color/transparent"
+                    ads:tabIndicatorHeight="0dp"
+                    ads:tabMode="scrollable" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:orientation="vertical"
+                android:id="@+id/rl_photo_tool"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="180dp">
+
+                <TextView
+                    android:textColor="@color/colorWhite"
+                    android:gravity="center"
+                    android:id="@+id/tvTransparency"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:text="@string/transparency" />
+
+                <SeekBar
+                    android:id="@+id/seekbar_photo_transparency"
+                    android:paddingRight="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_toRightOf="@+id/tvTransparency"
+                    android:progressTint="@color/tab_text_press_color"
+                    android:progressBackgroundTint="@color/white"
+                    android:thumbTint="@color/tab_text_press_color" />
+
+                <TextView
+                    android:textColor="@color/colorWhite"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:text="@string/rotate"
+                    android:layout_toLeftOf="@+id/seekbar_rotate"
+                    android:layout_below="@+id/tvTransparency" />
+
+                <SeekBar
+                    android:id="@+id/seekbar_rotate"
+                    android:paddingRight="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_toRightOf="@+id/tvTransparency"
+                    android:layout_below="@+id/seekbar_photo_transparency"
+                    android:progressTint="@color/tab_text_press_color"
+                    android:progressBackgroundTint="@color/white"
+                    android:thumbTint="@color/tab_text_press_color" />
+
+                <RelativeLayout
+                    android:orientation="vertical"
+                    android:id="@+id/rl_color_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/seekbar_rotate">
+
+                    <com.kessi.textarts.photoeditor.RoundFrameLayout
+                        android:id="@+id/btn_picker_color_photo"
+                        android:padding="3dp"
+                        android:clickable="true"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_margin="5dp"
+                        ads:rv_backgroundColor="@color/bottom_bg"
+                        ads:rv_cornerRadius="3dp"
+                        ads:rv_strokeColor="@color/icChecked"
+                        ads:rv_strokeWidth="2dp">
+
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_pencil" />
+                    </com.kessi.textarts.photoeditor.RoundFrameLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_color_photo"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_toRightOf="@+id/btn_picker_color_photo" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

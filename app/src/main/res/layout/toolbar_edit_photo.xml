@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:background="@color/main_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:clickable="true"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:src="@drawable/back" />
+
+        <ImageView
+            android:id="@+id/btnAddText_toolbar"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:src="@drawable/add"
+            android:layout_toLeftOf="@+id/btnUndo" />
+
+        <ImageView
+            android:id="@+id/btnUndo"
+            android:clickable="true"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:src="@drawable/undo"
+            android:layout_toLeftOf="@+id/btnRedo" />
+
+        <ImageView
+            android:id="@+id/btnRedo"
+            android:clickable="true"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:src="@drawable/redo"
+            android:layout_toLeftOf="@+id/btnSave" />
+
+        <ImageView
+            android:id="@+id/btnSave"
+            android:clickable="true"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:src="@drawable/download"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</RelativeLayout>

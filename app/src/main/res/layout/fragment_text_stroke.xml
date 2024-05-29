@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/bottom_bg"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/text_tool_top_height">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/text_tool_top_height_half">
+
+        <com.kessi.textarts.photoeditor.RoundFrameLayout
+            android:id="@+id/btn_picker_color_stroke"
+            android:padding="3dp"
+            android:clickable="true"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_margin="5dp"
+            android:layout_centerVertical="true"
+            app:rv_backgroundColor="@color/bottom_bg"
+            app:rv_cornerRadius="3dp"
+            app:rv_strokeColor="@color/icChecked"
+            app:rv_strokeWidth="2dp">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_pencil" />
+        </com.kessi.textarts.photoeditor.RoundFrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_color_stroke"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_toRightOf="@+id/btn_picker_color_stroke"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:theme="@style/TextBelowImage"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:text="Width" />
+
+        <SeekBar
+            android:id="@+id/sb_stroke_width"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:progress="50" />
+    </LinearLayout>
+</LinearLayout>

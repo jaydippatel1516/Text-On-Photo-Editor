@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/main_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp">
+
+        <ImageView
+            android:id="@+id/back"
+            android:padding="@dimen/_14sdp"
+            android:clickable="true"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="match_parent"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_background"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+
+        android:layout_below="@+id/header">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="@string/color" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerColor"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:nestedScrollingEnabled="false" />
+
+            <TextView
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:text="Abstract" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerAbstract"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:nestedScrollingEnabled="false" />
+
+            <TextView
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:text="@string/nature" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerNature"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:nestedScrollingEnabled="false" />
+
+            <TextView
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:text="Love" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerLove"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:nestedScrollingEnabled="false" />
+
+
+
+            <TextView
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:text="Animal" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerAnimal"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:nestedScrollingEnabled="false" />
+
+            <TextView
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:text="Cartoon" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerCartoon"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:nestedScrollingEnabled="false" />
+
+            <TextView
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:text="Vehicle" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerVehicle"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:nestedScrollingEnabled="false" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
